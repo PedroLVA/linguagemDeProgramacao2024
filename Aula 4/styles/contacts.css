@@ -1,0 +1,78 @@
+:root{
+    --text-color: #f3e8fa;
+    --nav-text-color: #d6afe0;
+    --nav-text-color-secundary: #e2abf1;
+    --background-coor: #16011c;
+}
+
+
+/*Overall decoration*/
+
+
+html, body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--background-coor);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, p{
+    color: var(--text-color);
+}
+
+/*navbar*/
+.nav-item-container:hover h1{
+    color: #c1a7d4;
+}
+.nav-item{
+    color: var(--text-color);
+    margin-bottom: 0px; 
+}
+.container{
+    border-bottom: 2px solid #200129;
+    margin: 0px;
+    background-color: var(--background-coor);
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-item-paragraph{
+    color: var(--nav-text-color-secundary);
+    margin-top: 0px;
+}
+
+/*navbar*/
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.icons{
+    gap: 100px;
+    display: flex;
+}
+.icons img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.icons img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .icons img:hover {
+    transform: translateY(-10px); /* Move the image up on hover */
+  }
