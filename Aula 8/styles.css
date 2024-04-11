@@ -1,0 +1,31 @@
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+}
+
+.cat{
+    align-self: flex-start;
+    border: 5px solid green;
+    order: 1;
+}
+
+.camel{
+    align-self: flex-end;
+    border: 5px solid yellow;
+}
+
+.horse{
+    align-self: center;
+    border: 5px solid red;
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  
+}
+
+
