@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.btn{
+    padding: 15px 32px;
+    text-decoration: none;
+    background-color: red;
+    cursor: pointer;
+    font-family: Verdana;
+    border: none;
+    color: white;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: rgb(158, 20, 20);
+}
+
+.menu{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.active{
+    background-color: rgb(247, 49, 49);
+    color: black;
+}
+.start{
+    border-radius: 20px 0 0 20px;
+}
+
+.end{
+border-radius: 0 20px 20px 0;
+}
+
+.tecla{
+    background-color: rgb(240, 232, 232);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+.teclado{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 400px;
+    border:2px solid black;
+    padding: 10px;
+    background-color: rgb(189, 186, 184);
+}
+
+.tecla:hover{
+    background-color: rgb(197, 197, 197);
+}
+.tecla:active{
+    background-color: rgb(177, 177, 177);
+}
+
+main{
+    
+    display: flex;
+    justify-content: center;
+}
+
