@@ -16,8 +16,36 @@ body{
     display: flex;
     gap: 100px;
     flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
 }
-
+.titulo-wrapper{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 50px;
+}
 li{
     font-size: 24px;
+    list-style: none;
+}
+
+button{
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 250px;
+    height: 100px;
+    background-color: rgb(224, 241, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(179, 221, 255);
+    
 }
