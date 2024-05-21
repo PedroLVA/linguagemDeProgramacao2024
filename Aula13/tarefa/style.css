@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 html {
     height: 100vh;
 }
@@ -32,14 +33,16 @@ ul {
 }
 
 nav {
-   background-color: rgb(156, 156, 156);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
    width: 100%;
 }
 
 nav ul {
     display: flex;
+    gap: 10px;
     justify-content: center;
     padding: 5px;
+    
 }
 
 .menuLink {
@@ -65,11 +68,12 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 400px;
+    min-width: 400px;
+    width: fit-content;
     margin-top: 20px;
     margin-bottom: 50px;
     font-family: 'Courier New', Courier, monospace;
-    border: 1px solid #333;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 10px;
 }
@@ -94,13 +98,13 @@ nav ul {
     background-color: #6d2121;
 }
 
-.linkAnimal {
+.linkcliente {
     text-decoration: none;
     color: black;
     margin-left: 10px;
 }
 
-.linkAnimal:hover {
+.linkcliente:hover {
     color: #4f4df1;
     font-weight: bold;
 }

@@ -1,5 +1,5 @@
 
-const urlServer = "https://663c040017145c4d8c34f840.mockapi.io/Animal/";
+const urlServer = "https://663c040017145c4d8c34f840.mockapi.io/Cliente/";
 
 let btns = document.querySelectorAll('a','.menuLink');
 let currentUrl = window.location.href;

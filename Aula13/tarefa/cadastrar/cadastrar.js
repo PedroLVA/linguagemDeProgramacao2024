@@ -10,14 +10,14 @@ const id = params.get('id');
 // Modo Editar
 if (id) {
     var nome = document.querySelector('#nome');
-    var raca = document.querySelector('#raca');
+    var email = document.querySelector('#email');
     var idade = document.querySelector('#idade');
 
     fetch(`${urlServer}${id}`)
     .then(response => response.json())
     .then(data => {
         nome.value = data.nome;
-        raca.value = data.raca;
+        email.value = data.email;
         idade.value = data.idade;
     });
 
@@ -29,13 +29,13 @@ if (id) {
 
 function atualizar() {
     var nome = document.querySelector('#nome').value;
-    var raca = document.querySelector('#raca').value;
+    var email = document.querySelector('#email').value;
     var idade = document.querySelector('#idade').value;
 
     var animal = {
         "nome": nome,
         "idade": idade,
-        "raca": raca
+        "email": email
     };
 
     fetch(`${urlServer}${id}`, {
@@ -52,13 +52,13 @@ function atualizar() {
 // Modo Cadastrar
 function cadastrar() {
     var nome = document.querySelector('#nome').value;
-    var raca = document.querySelector('#raca').value;
+    var email = document.querySelector('#email').value;
     var idade = document.querySelector('#idade').value;
 
     var animal = {
         "nome": nome,
         "idade": idade,
-        "raca": raca
+        "email": email
     };
 
     fetch(`${urlServer}`, {
