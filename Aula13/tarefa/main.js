@@ -29,6 +29,8 @@ function listaClientes() {
                 li.appendChild(a);
                    
                 lista.appendChild(li);
+
+               
             })
         })
 }
