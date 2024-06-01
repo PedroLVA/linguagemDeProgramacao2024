@@ -1,31 +1,27 @@
-document.querySelector('#myForm').addEventListener('submit',
-    function (event) {
-        event.preventDefault();
-       
-    }
-)
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
 
-let usuario = localStorage.getItem('usuario');
-let senha= localStorage.getItem('senha');
+let loginElement = document.querySelector('#login');
+let senhaElement = document.querySelector('#senha');
 
-if(usuario && senha){
-    document.querySelector('#usuario').value = usuario;
-    document.querySelector('#senha').value = senha;
-    console.log("funciooasa");
-    
+if (localStorage.getItem("login") && localStorage.getItem("senha")) {
+    login.value = localStorage.getItem("login");
+    senha.value = localStorage.getItem("senha");
+
+    console.log('login', login.value);
 }
 
-function checkLogin(){
-    console.log("funciooasa1");
-    let usuario = document.querySelector('#usuario').value
-    let senha = document.querySelector('#senha').value
+function validaLogin() {
+    let login = document.querySelector('#login').value;
+    let senha = document.querySelector('#senha').value;
 
-    if(usuario == 'admin' && senha == 'admin'){
-        localStorage.setItem('usuario', usuario);
-        localStorage.setItem('senha', senha);
-        document.querySelector('#errorMessage').innerHTML = 'worked as fuck';
+    if (login === 'admin' && senha === 'admin') {
+        localStorage.setItem("login", login);
+        localStorage.setItem("senha", senha);
+        document.querySelector('.loginInvalid').innerHTML = 'Funcionou!';
     }
-    else{
-        document.querySelector('#errorMessage').innerHTML = 'usuario ou senha inválidos';
+    else {
+        document.querySelector('.loginInvalid').innerHTML = 'Login ou senha inválidos!';
     }
 }
