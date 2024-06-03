@@ -2,8 +2,9 @@
 
 let cardsContainer = document.querySelector('#cardsContainer');
 
-let urlServer = "https://663c040017145c4d8c34f840.mockapi.io/Cliente";
+let urlServer = "https://663c040017145c4d8c34f840.mockapi.io/Cliente/";
 function buscaDados() {
+    cardsContainer.innerHTML = '';
     fetch(urlServer)
         .then(response => response.json())
         .then(data => {
@@ -22,8 +23,9 @@ function buscaDados() {
                     <h6 class="card-subtitle mb-2 text-body-secondary">Idade: ${client.idade} </h6>
                 </div>
                     <div class="d-flex justify-content-between">
-                        <button class="btn btn-success">Editar</button>
-                        <button class="btn btn-danger">Excluir</button>
+                        <a href="Cadastrar.html?id=${client.id}"><button class="btn btn-success">Editar</button></a>
+                    
+                        <button class="btn btn-danger" onclick="deleteCliente(${client.id})">Excluir</button>
                     </div>
                 </div>
             </div>
@@ -34,4 +36,10 @@ function buscaDados() {
         })
 }
 
+function deleteCliente(id){
+        fetch(`${urlServer}${id}`, {
+            method: "DELETE"
+        })
+        .then(() => buscaDados());
+    }   
 buscaDados();
